@@ -1,5 +1,8 @@
 import { FaPlayCircle } from "react-icons/fa";
 import { FaPauseCircle } from "react-icons/fa";
+import { RiPlayMiniLine } from "react-icons/ri";
+import { RiPauseLine } from "react-icons/ri";
+
 import { useState } from "react";
 
 const MiniPlayer = ({ openPlayer }) => {
@@ -8,30 +11,35 @@ const MiniPlayer = ({ openPlayer }) => {
     setminiPlayPause(!miniPlayPause);
   };
   return (
-    <div className="">
-      <div>
-        <div className="absolute bottom-0 w-full h-10">
+    <div>
+      <div className="absolute w-full flex justify-center bottom-2 ">
+        <div className="grid grid-cols-3 content-center gap-0">
+          <RiPlayMiniLine style={{ color: "transparent" }} size={2} />
+        </div>
+        <li className="col-span-2 ">
           <div className="text-center">
-            <div class="text-sm select-none text-white font-popins">Cradle</div>
-            <div class="text-xs select-none text-custom-graytext font-popins">
+            <div className="text-sm select-none text-white font-popins">
+              Cradle
+            </div>
+
+            <div className="text-xs select-none text-custom-graytext font-popins">
               Sub Urban
             </div>
           </div>
-        </div>
-        <div
-          className="absolute left-2 bottom-2 content-center flex items-center justify-center"
-          onClick={PlayPause}
-        >
+        </li>
+      </div>
+      <div className="absolute w-full flex justify-center bottom-2">
+        <div className="grid grid-cols-3 content-center gap-32">
           {miniPlayPause ? (
-            <FaPlayCircle
+            <RiPlayMiniLine
               style={{ color: "white" }}
-              size={30}
+              size={28}
               onClick={PlayPause}
             />
           ) : (
-            <FaPauseCircle
+            <RiPauseLine
               style={{ color: "white" }}
-              size={30}
+              size={28}
               onClick={PlayPause}
             />
           )}

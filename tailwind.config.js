@@ -10,6 +10,7 @@ module.exports = {
           graydark: "#383733",
           gradienttop: "#F3FF07",
           gradientbottom: "#00FFD7",
+          gray: "#0f0f0f",
         },
         azurlane: {
           1: "#7F7FD5",
